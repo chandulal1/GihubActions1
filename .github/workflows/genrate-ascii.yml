@@ -1,0 +1,23 @@
+name: my-second-workflow
+
+on: push
+
+jobs:
+    my-first-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v5
+            
+            - name: Installing cowsay
+              run: sudo apt-get install cowsay -y
+
+            - name: Generate ASCII artwork
+              run: cowsay -f dragon "Run for cover, I am a DRAGON...RAWR" >> dragon.txt
+
+            - name: multi-line-commmand
+              run: |
+                echo 'Github Actions'
+                ls -lrta
+                cat README.md
+
