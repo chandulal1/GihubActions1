@@ -9,12 +9,18 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v5
               
-            - name: Test-message
-              run: echo 'Github Actions'
+            - name: multi-line-commmand
+              run: |
+                echo 'Github Actions'
+                ls -lrta
+                cat README.md
 
-            - name: checking files
-              run: ls
+            - name: Generate ASCII artwork
+              run: cowsay -f dragon "Run for cover, I am a DRAGON...RAWR" >> dragon.txt
+
+            # - name: checking files
+            #   run: ls
             
-            - name: viewing files
-              run: cat README.md
+            # - name: viewing files
+            #   run: cat README.md
 
