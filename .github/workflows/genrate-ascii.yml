@@ -14,7 +14,7 @@ jobs:
 
             - name: Executing script
               run: |
-                chmod +x
+                chmod +x check.sh
                 ./check.sh
             
 
