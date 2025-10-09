@@ -13,9 +13,11 @@ jobs:
               run: ls -ltra
 
             - name: Executing script
-              run: ./check.sh
+              run: |
+                chmod +x
+                ./check.sh
             
-              
+
             # - name: Installing cowsay
             #   run: sudo apt-get install cowsay -y
 
