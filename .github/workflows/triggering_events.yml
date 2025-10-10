@@ -1,0 +1,15 @@
+name: Exploring_Variables_Secrets
+
+on: 
+    schedule: 
+        - cron: "*/1 * * * *"
+
+jobs:
+    My_first_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Docker Username print
+              run: echo ${{ vars.DOCKER_USERNAME }}
+
+            - name: Dragon file checking
+              run: echo ${{ secrets.DOCKER_PASSWORD }}
